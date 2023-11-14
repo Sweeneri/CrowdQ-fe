@@ -1,0 +1,23 @@
+.login-form-container {
+    text-align: center;
+    background: whitesmoke;
+    width: min-content;
+    padding: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.login-container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.login-header {
+    color: whitesmoke;
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 1000;
+    background-color: #333;
+    margin: 0;
+}

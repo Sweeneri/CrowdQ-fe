@@ -1,0 +1,118 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-links {
+    display: none; /* Hide the links by default on small screens */
+  }
+
+  
+  /* Media query for screens larger than 768px */
+  @media (min-width: 768px) {
+    .navbar {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .navbar-logo {
+      font-size: 36px;
+    }
+    .navbar-links {
+      display: flex;
+    }
+    
+    .hamburger-menu {
+        display: none;
+    }
+  
+    .navbar-links a {
+      margin-right: 20px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Animation for the hamburger icon */
+  .hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Sliding animation for the menu */
+  .navbar-links {
+    /* ... (previous styles) */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+  .hamburger-links {
+        /* max-width: 50vh; */
+        width: fit-content;
+        background: whitesmoke;
+        padding: 10px;
+        float: right;
+        border: 1px solid #333;
+        border-radius: 0px 0px 5px 5px;
+        box-shadow: #333;
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+  }
+  
+  .hamburger-links.open {
+    display: flex;
+  }
+  .hamburger-links.close {
+    display: none;
+  }
+  .hamburger-link a {
+    text-decoration: none;
+    background: #333;
+    color: whitesmoke;
+    padding: 7px;
+    border-radius: 15px;
+    display: block;
+    text-align: center;
+  }
+  .hamburger-link a:hover {
+    text-decoration: none;
+    background: whitesmoke;
+  }
+  .hamburger-link {
+    text-decoration: none;
+    background: whitesmoke;
+  }

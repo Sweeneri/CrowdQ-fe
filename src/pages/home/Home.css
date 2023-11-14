@@ -1,0 +1,43 @@
+.container {
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    top: 50vh;
+}
+.card {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: whitesmoke;
+}
+.card span {
+    margin: 10px 0;
+}
+.card span a {
+    text-decoration: none;
+    background: whitesmoke;
+    color: #333;
+    padding: 7px;
+    border-radius: 15px;
+}
+.card span a:hover {
+    color: #333;
+    text-decoration: none;
+}
+.card span a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Media query for screens larger than 768px */
+@media (min-width: 768px) {
+    .card {
+        width: max-content;
+        font-size: xx-large;
+        padding: 40px;
+    }
+}
