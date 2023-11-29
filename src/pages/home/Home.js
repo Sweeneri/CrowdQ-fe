@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
             <Navigation />
-            <div className='container'>
+            <div className='container home-container'>
                 <div className='card'>
                     <span><a href='/session/create'>Start a Session</a></span>
                     <span>or</span>

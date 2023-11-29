@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -20,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     // Here you can add authentication logic to check the username and password
     // For example, send a request to your server to validate the credentials.
-    debugger;
+    
     var endpoint = process.env.REACT_APP_APP_BASE_URL + 'Users/login'
     axios.post(endpoint, {
       userName: username,
@@ -28,13 +29,13 @@ const Login = () => {
     })
     .then(function (response) {
       localStorage.setItem('loggedIn',true);
-      debugger;
+      
       localStorage.setItem('userId',response.data.userId);
       renderHomeGoTo();
     })
     .catch(function (error) {
       localStorage.setItem('loggedIn',false);
-      alert(error.response ? error.response.data : "Error Logging in!");
+      toast.error(error.response ? error.response.data : "Error Logging in!");
     });
 
   };
@@ -52,6 +53,9 @@ const Login = () => {
   };
 
   return (
+    <>
+    <div><Toaster/></div>
+    <h1 className='login-header'>CrowdQ</h1>
     <div className='login-container'>
         <div className="login-form-container">
         <h2>Login</h2>
@@ -84,6 +88,7 @@ const Login = () => {
         </form>
         </div>
     </div>
+    </>
   );
 };
 

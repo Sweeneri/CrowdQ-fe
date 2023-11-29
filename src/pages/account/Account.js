@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navigation from '../../components/nav/Navigation';
 import { useNavigate } from "react-router-dom";
 import './Account.css';
+import { Toaster, toast } from 'react-hot-toast';
 
 function Account() {
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ function Account() {
 
     useEffect(() => {
         async function fetchData() {
-        debugger;
+        
             const userId = localStorage.getItem('userId');
             if (userId) {
                 const user = await getUserConfiguration(userId);
@@ -32,7 +33,7 @@ function Account() {
     };
 
     async function getUserConfiguration(id) {
-        debugger;
+        
         const endpoint = process.env.REACT_APP_APP_BASE_URL + 'Users/' + id;
         try {
             const response = await axios.get(endpoint);
@@ -46,13 +47,13 @@ function Account() {
                 password: userData.password,
             };
         } catch (error) {
-            alert("Error retrieving user information. " + error.response.data);
+            toast.error("Error retrieving user information. " + error.response.data);
             return null; // or handle the error in a way that makes sense for your application
         }
     }
 
     const handleSave = (user) => {
-        debugger;
+        
         const endpoint = process.env.REACT_APP_APP_BASE_URL + 'Users/' + user.userId;
         try {
             axios.put(endpoint, {
@@ -70,7 +71,7 @@ function Account() {
                 console.log(error.response.data)
             });
         } catch (error) {
-            alert("Error retrieving user information. " + error.response.data);
+            toast.error("Error retrieving user information. " + error.response.data);
             return null; // or handle the error in a way that makes sense for your application
         }
     }
@@ -85,6 +86,7 @@ function Account() {
     }
 
     return (<>
+        <div><Toaster/></div>
         <Navigation />
         <div className="user-form-container">
           <h2>User Information</h2>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Create-Account.css';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import { Toaster, toast } from 'react-hot-toast';
 
 
 const CreateAccount = () => {
@@ -23,7 +24,7 @@ const CreateAccount = () => {
     e.preventDefault();
     // Here you can add authentication logic to check the username and password
     // For example, send a request to your server to validate the credentials.
-    debugger;
+    
     var endpoint = process.env.REACT_APP_APP_BASE_URL + 'Users/'
     axios.post(endpoint, {
       userId: 0,
@@ -33,16 +34,16 @@ const CreateAccount = () => {
       password: password,
     })
     .then(function (response) {
-      debugger;
+      
       localStorage.setItem('loggedIn',true);
       localStorage.setItem('userId',response.data.userId);
       
       homeGoTo();
     })
     .catch(function (error) {
-      debugger;
+      
       localStorage.setItem('loggedIn',false);
-      alert("Error creating account. Please try again. " + error.response.data);
+      toast.error("Error creating account. Please try again. " + error.response.data);
     });
   };
   const loginAsGuest = (e) => {
@@ -54,6 +55,7 @@ const CreateAccount = () => {
   };
 
   return (<>
+    <div><Toaster/></div>
     
     <h1 className='login-header'>CrowdQ</h1>
     <div className='login-container'>

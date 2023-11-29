@@ -6,10 +6,12 @@
     background-color: #333;
     color: white;
     padding: 10px 20px;
+    background-color: #5867dd;
   }
   
   .navbar-logo {
     font-size: 1.5rem;
+    margin-left: 15px;
   }
   
   .navbar-links {
@@ -21,7 +23,8 @@
   @media (min-width: 768px) {
     .navbar {
       font-size: 20px;
-      margin-bottom: 20px;
+      margin: 0 auto;
+      padding: 10px 10%;
     }
     .navbar-logo {
       font-size: 36px;
@@ -91,6 +94,7 @@
         position: absolute;
         right: 0;
         flex-direction: column;
+        z-index: 1100;
   }
   
   .hamburger-links.open {
@@ -107,6 +111,7 @@
     border-radius: 15px;
     display: block;
     text-align: center;
+    background-color: #5867dd;
   }
   .hamburger-link a:hover {
     text-decoration: none;

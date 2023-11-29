@@ -6,6 +6,7 @@ import CreateAccount from "./pages/createAccount/Create-Account";
 import Account from "./pages/account/Account";
 import CreateSession from "./pages/session/CreateSession/CreateSession";
 import JoinSession from "./pages/session/JoinSession/JoinSession";
+import ViewSession from "./pages/session/ViewSession/ViewSession";
 
 
 export const RoutesQ = () => {
@@ -18,6 +19,7 @@ export const RoutesQ = () => {
             <Route path="/account" element={<Account />} />
             <Route path="/session/create" element={<CreateSession />} />
             <Route path="/session/join" element={<JoinSession />} />
+            <Route path="/session/:id" element={<ViewSession />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )

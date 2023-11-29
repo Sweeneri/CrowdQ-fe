@@ -2,6 +2,8 @@ import React from 'react';
 import { RoutesQ } from './Routes';
 import './App.css';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Toaster, toast } from 'react-hot-toast';
 
 function App() {
   axios.defaults.headers.common['accept'] = 'text/plain' // for all requests

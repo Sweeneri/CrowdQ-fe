@@ -39,7 +39,7 @@ const Navigation = () => {
   }
   return (<>
     <div className="navbar">
-      <div className="navbar-logo" onClick={home}>CrowdQ</div>
+      <h3 className="login-header" style={{background: '#5867dd'}} onClick={home}>CrowdQ</h3>
       <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
           <a href="/" onClick={startSession}>Start Session</a>
           <a href="/" onClick={joinSession}>Join Session</a>

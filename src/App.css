@@ -14,3 +14,18 @@ input {
   border-radius: 20px;
   line-height: 500px;
 }
+
+.badge {
+  background-color: #384ad7 !important;
+}
+.card {
+  position: static !important;
+}
+.space-on-sides-mb {
+  margin: 10px;
+  position: relative;
+  border-color: #5867dd;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 20px;
+}

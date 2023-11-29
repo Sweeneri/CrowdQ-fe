@@ -1,0 +1,58 @@
+.request-btn {
+    text-decoration: none;
+    background-color: #384ad7;
+    color: #fff;
+    padding: 7px;
+    margin: 7px;
+    border-radius: 5px;
+  }
+  .request-btn:hover {
+    background-color: #5867dd;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .request-btn:visited {
+    text-decoration: none;
+  }
+  .view-session-form {
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: whitesmoke;
+    border-color: #5867dd;
+}
+.card span {
+    margin: 10px 0;
+}
+.card span a {
+    text-decoration: none;
+    background: #5867dd;
+    color: whitesmoke;
+    padding: 7px;
+    border-radius: 15px;
+}
+.card span a:hover {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.card span a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.thumbs-button {
+    border-radius: 5px;
+    color: #384ad7;
+    border-color: #384ad7;
+}
+.min-width-100 {
+    min-width: 100px;
+}

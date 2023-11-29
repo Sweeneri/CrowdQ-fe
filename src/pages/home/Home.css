@@ -5,7 +5,7 @@
     top: 50vh;
 }
 .card {
-    background-color: #333;
+    background-color: #5867dd;
     padding: 10px;
     border-radius: 20px;
     text-align: center;
@@ -19,7 +19,7 @@
 }
 .card span a {
     text-decoration: none;
-    background: whitesmoke;
+    background: #5867dd;
     color: #333;
     padding: 7px;
     border-radius: 15px;
@@ -31,6 +31,10 @@
 .card span a:visited {
     color: #333;
     text-decoration: none;
+}
+.home-container {
+    display: flex;
+    justify-content: center;
 }
 
 /* Media query for screens larger than 768px */

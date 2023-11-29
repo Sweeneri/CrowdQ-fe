@@ -1,1 +1,2 @@
-# CrowdQ-fe
+# crowdQ
+Senior design project.
